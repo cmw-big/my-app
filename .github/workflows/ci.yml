@@ -13,7 +13,9 @@ jobs:
       # name 表示这次步骤的名字
       - name: Checkout
         # 这个action表示检查你的仓库是不是在$GITHUB_WORKSPACE下面。这样整个工作流才能正常的访问。
-        uses: actions/checkout@v3.1.0
+        uses: actions/checkout@V3
+        with:
+          persist-credentials: false
       - name: Install and Build
         run: |
           npm install
