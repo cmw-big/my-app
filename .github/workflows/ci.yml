@@ -25,6 +25,8 @@ jobs:
         # 这个action是用于部署页面到github上。
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
+          # 需要权限的token才行
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 将打包部署后的代码放到哪个分支里面去
           BRANCH: gh-pages
           FOLDER: build
