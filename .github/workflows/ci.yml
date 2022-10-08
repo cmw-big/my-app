@@ -15,6 +15,7 @@ jobs:
         # 这个action表示检查你的仓库是不是在$GITHUB_WORKSPACE下面。这样整个工作流才能正常的访问。
         uses: actions/checkout@v3.1.0
         with:
+          # 不要使用本地的git config的ssh key或者配置的密钥。
           persist-credentials: false
       - name: Install and Build
         run: |
