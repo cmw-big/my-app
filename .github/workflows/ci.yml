@@ -29,4 +29,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           # 将打包部署后的代码放到哪个分支里面去
           BRANCH: gh-pages
+          # 部署的文件夹
           FOLDER: build
